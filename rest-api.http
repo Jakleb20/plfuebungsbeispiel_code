@@ -1,0 +1,39 @@
+ ### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+
+### Post Requebst (ADMIN)
+POST http://localhost:8080/api/v1/public/signin
+Content-Type: application/json
+
+{
+  "username": "Sherlock Holmes",
+  "password": "1939"
+}
+
+### Post Requebst (USER)
+POST http://localhost:8080/api/v1/public/signin
+Content-Type: application/json
+
+{
+  "username": "Chewbacca",
+  "password": "1977"
+}
+
+### Zuerst mit User einloggen und dann mit dem Token den Request machen
+### GET Request
+GET http://localhost:8080/api/v1/user/getNumberOfRecords
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5odGwta2FpbmRvcmYuYWMuYXQiLCJzdWIiOiJDaGV3YmFjY2EiLCJpYXQiOjE3NDMyNjI2OTksImV4cCI6MTc0MzI2NDQ5OX0.BZg9voXK4rBenAdtpx95UVZXs6SFGag-if84r3j5wcI
+
+
+// Zuerst mit Admin einloggen und dann mit dem Token den Request machen
+### GET Request
+GET http://localhost:8080/api/v1/admin/getNameOfMeasuringStations
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5odGwta2FpbmRvcmYuYWMuYXQiLCJzdWIiOiJTaGVybG9jayBIb2xtZXMiLCJpYXQiOjE3NDMyNjI3MTUsImV4cCI6MTc0MzI2NDUxNX0.4dTokgGPhCbyTG6C05wi9v2UMg_CnfR9v62wIoXxttA
+
+
+// Zuerst mit Admin einloggen und dann mit dem Token den Request machen
+### GET Request
+GET http://localhost:8080/api/v1/admin/getMaxTemperatureOfAllStations
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3d3dy5odGwta2FpbmRvcmYuYWMuYXQiLCJzdWIiOiJTaGVybG9jayBIb2xtZXMiLCJpYXQiOjE3NDMyNjM0MjksImV4cCI6MTc0MzI2NTIyOX0.V2fP6suNFD4_6D3PKbqzOBSitfwecTg-wIJTK6b1qIk
